@@ -11,44 +11,50 @@
     <title>Atividade de JS</title>
 </head>
 <body>
+    <div class="">
+       
+            <h1>Calculadora (Feita em JavaScript)</h1>
 
-        <div class="estilo">
+        <div class="lateral">
 
-            <h1>Funções de calculo em JS (Javascript)</h1>
-        
             <div>
-                <label for="lbname">Insira o 1̣º valor:</label>
+                <label for="lbname"></label>
                     <input id="num1" type="text" />
             </div>
             
 
             <div>
-                <label for="lbname">Insira o 2º valor:</label>
+               <input type="text" id="sinal" readonly>
                     <input id="num2" type="text" />
             </div>
         
             <div>
-                <label for="lbname">Insira o 3º valor:</label>
-                    <input id="num3" type="text" />
+                <label for="lbname" style="margin-left: 5px;"> =</label>
+                    <input id="num3" type="text" value="" disabled/>
             </div>
 
-            <div class="escolha">
+            <div id="hist">
+                <textarea id="historico" disabled>
+                    Histórico
+                </textarea>
+            </div>
+        </div> 
 
-                <button id="somar" onclick="somar()">Somar</button>
-
-                <button id="menos" onclick="subtrair()">Subtração</button>
-    
-                <button id="média" onclick="media()">Média</button>
-    
-                <button id="vezes" onclick="multi()">Multiplicação</button>
-    
-                <button id="dividir" onclick="divis()">Divisão</button>
-
-                <button id="restart"><a href="index.html">C</a></button>
+            <div id="escolha">
+                <ul>
+                    <li><button id="somar" onclick="somar()">Somar</button></li>
+                    <li><button id="menos" onclick="subtrair()">Subtração</button></li>
+                    <li><button id="vezes" onclick="multi()">Multiplicação</button></li>
+                    <li><button id="dividir" onclick="divis()">Divisão</button></li>
+                    <li><button id="média" onclick="media()">Média</button></li>
+                    <li> <button id="restart"><a style="text-decoration: none;" href="index.html">Limpar</a></button></li>
+                </ul>
                 
            </div>
 
-        </div>
+        
+    </div>
+        
 
 
 </body>
