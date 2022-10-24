@@ -1,10 +1,12 @@
-function somar(num1 , num2 , num3) {
+function somar(num1 , num2) {
 
     var v1 = document.getElementById('num1').value;
     var v2 = document.getElementById('num2').value;
-    var v3 = document.getElementById('num3').value;
+    var sinal = "+";
+    var historico =  document.getElementById('historico').value;
 
-if(document.getElementById('num1').value == "" || document.getElementById('num2').value == "" || document.getElementById('num3').value == "" ){
+if(document.getElementById('num1').value == "" || document.getElementById('num2').value == "")
+    {
         if(document.getElementById('num1').value == "")
         {
             alert("1º elemento sem valor");
@@ -13,26 +15,28 @@ if(document.getElementById('num1').value == "" || document.getElementById('num2'
             {
             alert("2º elemento sem valor");
             }
-                if(document.getElementById('num3').value == "")
-                {
-                    alert("3º elemento sem valor");
-                }
-            }
-//var resullt = (v1 + v2+ v3)
+    }
+//var resullt = (v1 + v2)
    
-    let result = parseFloat(v1) + parseFloat(v2) + parseFloat(v3);
+    let result = parseFloat(v1) + parseFloat(v2);
 
-     alert(result);
+     document.getElementById("num3").value = result;
+     document.getElementById("historico").value = " "+v1+" "+sinal+" "+v2+" = "+result+"\n"+historico;
+  
+
+     
 
 }
 
-function media(num1 , num2 , num3) {
+function media(num1 , num2) {
 
     var v1 = document.getElementById('num1').value;
     var v2 = document.getElementById('num2').value;
-    var v3 = document.getElementById('num3').value;
+    var sinal = "/ 2";
+    var historico =  document.getElementById('historico').value;
 
-    if(document.getElementById('num1').value == "" || document.getElementById('num2').value == "" || document.getElementById('num3').value == "" ){
+    if(document.getElementById('num1').value == "" || document.getElementById('num2').value == "")
+    {
         if(document.getElementById('num1').value == "")
         {
             alert("1º elemento sem valor");
@@ -41,26 +45,25 @@ function media(num1 , num2 , num3) {
             {
             alert("2º elemento sem valor");
             }
-                if(document.getElementById('num3').value == "")
-                {
-                    alert("3º elemento sem valor");
-                }
-            }
+    }
 
-//var resullt = (v1 + v2+ v3) /3
+//var resullt = (v1 + v2) /2
 
-    let result = (parseFloat(v1) + parseFloat(v2) + parseFloat(v3)) / 3;
+    let result = (parseFloat(v1) + parseFloat(v2)) / 2;
 
-    alert(result);
+    document.getElementById("num3").value = result;
+    document.getElementById("historico").value = "("+v1+" + "+v2+") "+sinal+" = "+result+"\n"+historico;
 }
 
-function subtrair(num1 , num2 , num3) {
+function subtrair(num1 , num2) {
 
     var v1 = document.getElementById('num1').value;
     var v2 = document.getElementById('num2').value;
-    var v3 = document.getElementById('num3').value;
+    var sinal = "-";
+    var historico =  document.getElementById('historico').value;
 
-    if(document.getElementById('num1').value == "" || document.getElementById('num2').value == "" || document.getElementById('num3').value == "" ){
+    if(document.getElementById('num1').value == "" || document.getElementById('num2').value == "")
+    {
         if(document.getElementById('num1').value == "")
         {
             alert("1º elemento sem valor");
@@ -69,29 +72,28 @@ function subtrair(num1 , num2 , num3) {
             {
             alert("2º elemento sem valor");
             }
-                if(document.getElementById('num3').value == "")
-                {
-                    alert("3º elemento sem valor");
-                }
-            }
+    }
     
     
 
-//var resullt = (v1 - v2 - v3)
+//var resullt = (v1 - v2)
 
-    let result = (v1) - parseFloat(v2) - parseFloat(v3);
+    let result = parseFloat(v1) - parseFloat(v2);
 
-    alert(result);
+    document.getElementById("num3").value = result;
+    document.getElementById("historico").value = " "+v1+" "+sinal+" "+v2+" = "+result+"\n"+historico;
 }
 
 
-function multi(num1 , num2 , num3) {
+function multi(num1 , num2) {
 
     var v1 = document.getElementById('num1').value;
     var v2 = document.getElementById('num2').value;
-    var v3 = document.getElementById('num3').value;
+    var sinal = "*";
+    var historico =  document.getElementById('historico').value;
 
-    if(document.getElementById('num1').value == "" || document.getElementById('num2').value == "" || document.getElementById('num3').value == "" ){
+    if(document.getElementById('num1').value == "" || document.getElementById('num2').value == "")
+    {
         if(document.getElementById('num1').value == "")
         {
             alert("1º elemento sem valor");
@@ -100,27 +102,26 @@ function multi(num1 , num2 , num3) {
             {
             alert("2º elemento sem valor");
             }
-                if(document.getElementById('num3').value == "")
-                {
-                    alert("3º elemento sem valor");
-                }
-            }
+    }
     
 
-//var resullt = (v1 * v2 * v3)
+//var resullt = (v1 * v2)
 
-    let result = parseFloat(v1) * parseFloat(v2) * parseFloat(v3);
+    let result = parseFloat(v1) * parseFloat(v2);
 
-    alert(result);
+    document.getElementById("num3").value = result;
+    document.getElementById("historico").value = " "+v1+" "+sinal+" "+v2+" = "+result+"\n"+historico;
 }
 
-function divis(num1 , num2 , num3) {
+function divis(num1 , num2) {
 
     var v1 = document.getElementById('num1').value;
     var v2 = document.getElementById('num2').value;
-    var v3 = document.getElementById('num3').value;
+    var sinal = "/";
+    var historico =  document.getElementById('historico').value;
 
-    if(document.getElementById('num1').value == "" || document.getElementById('num2').value == "" || document.getElementById('num3').value == "" ){
+    if(document.getElementById('num1').value == "" || document.getElementById('num2').value == "")
+    {
         if(document.getElementById('num1').value == "")
         {
             alert("1º elemento sem valor");
@@ -129,16 +130,13 @@ function divis(num1 , num2 , num3) {
             {
             alert("2º elemento sem valor");
             }
-                if(document.getElementById('num3').value == "")
-                {
-                    alert("3º elemento sem valor");
-                }
-            }
+    }
     
 
-//var resullt = (v1 * v2 * v3)
+//var resullt = (v1 / v2)
 
-    let result = parseFloat(v1) / parseFloat(v2) / parseFloat(v3);
+    let result = parseFloat(v1) / parseFloat(v2);
 
-    alert(result);
+    document.getElementById("num3").value = result;
+    document.getElementById("historico").value = " "+v1+" "+sinal+" "+v2+" = "+result+"\n"+historico;
 }
